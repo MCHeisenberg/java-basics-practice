@@ -84,7 +84,7 @@ public class ObjectPractice {
         Computer pc10 = new Computer();
         pc10.brand = "Greatest";
         st10.myPc = pc10;
-        st10.name = "土匪.王大麻子";
+        st10.name = "王大麻子";
         st10.age = 888;
         st10.writeCode();
 
