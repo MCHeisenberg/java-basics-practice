@@ -1,11 +1,11 @@
 package day07;
 
-public class Survior {
+public class Survivor {
     private String name;
     private int hp;
     private int caps;
 
-    public Survior(String name, int hp,int caps){
+    public Survivor(String name, int hp, int caps){
         this.name = name;
         this.hp = hp;
         this.caps = caps;
