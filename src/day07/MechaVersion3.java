@@ -38,7 +38,7 @@ public class MechaVersion3 {
         hp -= damage;
     }
 
-    public void mechineGun(TyrantVersion3 target){
+    public void machineGun(TyrantVersion3 target){
         target.getDamage(30);
     }
 

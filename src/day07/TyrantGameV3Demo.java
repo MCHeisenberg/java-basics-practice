@@ -17,7 +17,7 @@ public class TyrantGameV3Demo {
             int choose = sc.nextInt();
 
             if(choose == 1){
-                myMecha.mechineGun(tyrant);
+                myMecha.machineGun(tyrant);
             } else if (choose == 2) {
                 myMecha.orbitalStrike(tyrant);
             } else if (choose == 3) {

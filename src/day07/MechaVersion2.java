@@ -14,7 +14,7 @@ public class MechaVersion2 {
         this.energy = energy;
     }
 
-    public void mechineGun(TyrantVersion2 target){
+    public void machineGun(TyrantVersion2 target){
         target.takeDamage(30);
     }
 
