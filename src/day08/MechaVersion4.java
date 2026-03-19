@@ -1,0 +1,90 @@
+package day08;
+
+import day07.MechaVersion3;
+import day07.TyrantVersion3;
+
+import javax.xml.crypto.dsig.spec.XSLTTransformParameterSpec;
+
+public class MechaVersion4 {
+    private String name;
+    private int hp;
+    private int maxHp;
+    private int energy;
+
+    public MechaVersion4(String name, int hp, int maxHp, int energy){
+        this.name = name;
+        this.hp = hp;
+        this.maxHp = hp;
+        this.energy = energy;
+    }
+    public String getName() {
+        return name;
+    }
+
+    public int getHp() {
+        return hp;
+    }
+
+    public int getMaxHp() {
+        return maxHp;
+    }
+
+    public int getEnergy() {
+        return energy;
+    }
+
+    public boolean isAlive(){
+        return hp > 0;
+    }
+
+    public void takeDamage(int damage){
+        if(damage <= 0){
+            return;
+        }
+
+        hp -= damage;
+
+        if(hp < 0){
+            hp = 0;
+        }
+
+        System.out.println(name + " 受到 " + damage + " 点伤害！ ");
+
+    }
+
+    public void machineGun(TyrantVersion4 target){
+        System.out.println(" 使用【动能机枪】！");
+        target.takeDamage(30);
+    }
+
+    public void orbitalStrike(TyrantVersion4 target){
+        if(energy < 40){
+            System.out.println(" 能量不足，无法发动【轨道天基武器】 ");
+            return;
+        }
+
+        energy -= 40;
+        System.out.println(" 使用【轨道天基武器】 ");
+        target.takeDamage(80);
+    }
+
+    public void repair(){
+        if(energy < 30){
+            System.out.println(" 能量不足，无法进行【纳米修复】 ");
+            return;
+        }
+
+        energy -= 30;
+        int healAmount = 50;
+        int hpRecord = hp;
+        hp += healAmount;
+
+        if(hp > maxHp){
+            hp = maxHp;
+        }
+        System.out.println(" 启动【纳米修复】，本次恢复" + (hpRecord - hp) +" 点血量！ ");
+    }
+
+
+
+}
