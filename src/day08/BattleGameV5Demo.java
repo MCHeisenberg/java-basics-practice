@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class BattleGameV5Demo {
     public static void main(String[] args) {
-        MechaVersion4 myMecha = new MechaVersion4("无敌防御机甲", 80000, 600);
-        TyrantVersion4 tyrant = new TyrantVersion4("TyrantGuy", 300, 600);
+        MechaVersion4 myMecha = new MechaVersion4("无敌防御机甲", 800, 600);
+        TyrantVersion4 tyrant = new TyrantVersion4("TyrantGuy", 300, 1);
 
         Scanner sc = new Scanner(System.in);
 
@@ -14,6 +14,9 @@ public class BattleGameV5Demo {
             showMenu();
 
             int choice = sc.nextInt();
+
+            System.out.println("-------------------------------------------");
+            System.out.println("【战斗过程】");
 
             handlePlayerTurn(choice, myMecha, tyrant);
             handleEnemyTurn(myMecha, tyrant);
@@ -25,12 +28,12 @@ public class BattleGameV5Demo {
     }
 
     public static void showStatus(MechaVersion4 mecha, TyrantVersion4 tyrant){
-        System.out.println("====================BattleGame=====================");
+        System.out.println("=====================================BattleGame======================================");
         System.out.println("【当前战况】");
-        System.out.println(mecha.getName() + "：HP" + mecha.getHp() + "/" + mecha.getMaxHp()
-        + " | Energy" + mecha.getEnergy());
-        System.out.println(tyrant.getName() + "：HP" + tyrant.getHp() + " | 攻击力" + tyrant.getAttackPower());
-        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        System.out.println(mecha.getName() + "：HP " + mecha.getHp() + "/" + mecha.getMaxHp()
+        + " | Energy " + mecha.getEnergy());
+        System.out.println(tyrant.getName() + "：HP " + tyrant.getHp() + " | 攻击力 " + tyrant.getAttackPower());
+        System.out.println("-------------------------------------------");
     }
 
     public static void showMenu(){
@@ -53,14 +56,14 @@ public class BattleGameV5Demo {
         }
     }
 
-    public static void handleEnemyTurn(MechaVersion4 meche, TyrantVersion4 tyrant){
+    public static void handleEnemyTurn(MechaVersion4 mecha, TyrantVersion4 tyrant){
         if(tyrant.isAlive()){
-            tyrant.attack(meche);
+            tyrant.attack(mecha);
         }
     }
 
     public static void printResult(MechaVersion4 mecha, TyrantVersion4 tyrant){
-        System.out.println("↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓~~~End~~~↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓");
+        System.out.println("-------------------End----------------------");
         if(mecha.isAlive()){
             System.out.println(mecha.getName()+" Win!");
         }else {
