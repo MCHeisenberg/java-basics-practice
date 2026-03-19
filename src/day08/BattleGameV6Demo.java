@@ -19,7 +19,7 @@ public class BattleGameV6Demo {
             handleEnemyTurn(myMecha, tyrant);
         }
 
-        showResult(myMecha,tyrant);
+        printResult(myMecha,tyrant);
         sc.close();
 
     }
@@ -46,7 +46,7 @@ public class BattleGameV6Demo {
             if(!sc.hasNextInt()){
                 System.out.println("输入无效，请输入 1、2 或 3！");
                 sc.next();
-                System.out.println("请重新输入：");
+                System.out.print("请重新输入：");
                 continue;
             }
 
@@ -57,7 +57,7 @@ public class BattleGameV6Demo {
             }
 
             System.out.println("输入无效，请输入 1、2 或 3！");
-            System.out.println("请重新输入：");
+            System.out.print("请重新输入：");
         }
     }
 
@@ -78,12 +78,12 @@ public class BattleGameV6Demo {
         }
     }
 
-    public static void showResult(MechaVersion4 mecha, TyrantVersion4 tyrant){
+    public static void printResult(MechaVersion4 mecha, TyrantVersion4 tyrant){
         System.out.println("-------------------------------------------------------");
         if(mecha.isAlive()){
             System.out.println(mecha.getName() + " Win!");
         }else {
-            System.out.println(tyrant.getName() + " Win,Game Over!");
+            System.out.println(tyrant.getName() + " Win, Game Over!");
         }
     }
 
