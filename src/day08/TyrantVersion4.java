@@ -38,11 +38,11 @@ public class TyrantVersion4 {
             hp = 0;
         }
 
-        System.out.println(name + " 受到 " + damage + " 点伤害！ ");
+        System.out.println(name + "受到" + damage + "点伤害!");
     }
 
     public void attack(MechaVersion4 target){
+        System.out.println(name + "发动反击！造成" + attackPower + "点伤害！");
         target.takeDamage(attackPower);
-        System.out.println(name + " 发动反击！造成 " + attackPower + "点伤害！");
     }
 }

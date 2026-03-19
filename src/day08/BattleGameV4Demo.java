@@ -11,12 +11,12 @@ public class BattleGameV4Demo {
 
         while(myMecha.isAlive() && tyrant.isAlive()){
             System.out.println("====================BattleGame==================");
-            System.out.println(" 【当前战况】 ");
+            System.out.println("【当前战况】");
             System.out.println(myMecha.getName() + "：HP " + myMecha.getHp() +
                     "/" + myMecha.getMaxHp() + " | Energy " + myMecha.getEnergy());
             System.out.println(tyrant.getName() + "：HP " + tyrant.getHp());
             System.out.println("------------------------------------------------");
-            System.out.println(" 【技能选项：】 ");
+            System.out.println("【技能选项：】");
             System.out.println("1. 动能机枪（30伤害）");
             System.out.println("2. 轨道天基武器（消耗40能量，80伤害）");
             System.out.println("3. 纳米修复（消耗30能量，恢复50血）");
@@ -30,6 +30,8 @@ public class BattleGameV4Demo {
                 myMecha.orbitalStrike(tyrant);
             } else if (choice == 3) {
                 myMecha.repair();
+            }else {
+                System.out.println("输入无效，本回合跳过！");
             }
 
             if(tyrant.isAlive()){
@@ -39,9 +41,9 @@ public class BattleGameV4Demo {
 
         System.out.println("--------------------------------------------");
         if(myMecha.isAlive()){
-            System.out.println(myMecha.getName() + " Win ");
+            System.out.println(myMecha.getName() + "Win");
         }else {
-            System.out.println(tyrant.getName() + "Win,Game Over ! ");
+            System.out.println(tyrant.getName() + "Win,Game Over!");
         }
 
         sc.close();

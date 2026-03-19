@@ -43,33 +43,34 @@ public class MechaVersion4 {
             hp = 0;
         }
 
-        System.out.println(name + " 受到 " + damage + " 点伤害！ ");
+        System.out.println(name + "受到" + damage + "点伤害！");
 
     }
 
     public void machineGun(TyrantVersion4 target){
-        System.out.println(" 使用【动能机枪】！");
+        System.out.println(name + "使用【动能机枪】！");
         target.takeDamage(30);
     }
 
     public void orbitalStrike(TyrantVersion4 target){
         if(energy < 40){
-            System.out.println(" 能量不足，无法发动【轨道天基武器】 ");
+            System.out.println(name + "能量不足，无法发动【轨道天基武器】");
             return;
         }
 
         energy -= 40;
-        System.out.println(" 使用【轨道天基武器】 ");
+        System.out.println(name + "使用【轨道天基武器】");
         target.takeDamage(80);
     }
 
     public void repair(){
         if(energy < 30){
-            System.out.println(" 能量不足，无法进行【纳米修复】 ");
+            System.out.println(name + "能量不足，无法进行【纳米修复】");
             return;
         }
 
         energy -= 30;
+
         int healAmount = 50;
         int hpRecord = hp;
         hp += healAmount;
@@ -77,7 +78,7 @@ public class MechaVersion4 {
         if(hp > maxHp){
             hp = maxHp;
         }
-        System.out.println(" 启动【纳米修复】，本次恢复" + (hp - hpRecord) +" 点血量！ ");
+        System.out.println(name + "启动【纳米修复】，本次恢复" + (hp - hpRecord) +"点血量！");
     }
 
 
