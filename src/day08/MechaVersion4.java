@@ -1,10 +1,5 @@
 package day08;
 
-import day07.MechaVersion3;
-import day07.TyrantVersion3;
-
-import javax.xml.crypto.dsig.spec.XSLTTransformParameterSpec;
-
 public class MechaVersion4 {
     private String name;
     private int hp;
@@ -82,7 +77,7 @@ public class MechaVersion4 {
         if(hp > maxHp){
             hp = maxHp;
         }
-        System.out.println(" 启动【纳米修复】，本次恢复" + (hpRecord - hp) +" 点血量！ ");
+        System.out.println(" 启动【纳米修复】，本次恢复" + (hp - hpRecord) +" 点血量！ ");
     }
 
 
