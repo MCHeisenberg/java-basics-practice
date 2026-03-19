@@ -11,7 +11,7 @@ public class MechaVersion4 {
     private int maxHp;
     private int energy;
 
-    public MechaVersion4(String name, int hp, int maxHp, int energy){
+    public MechaVersion4(String name, int hp, int energy){
         this.name = name;
         this.hp = hp;
         this.maxHp = hp;

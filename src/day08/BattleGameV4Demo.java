@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class BattleGameV4Demo {
     public static void main(String[] args) {
-        MechaVersion4 myMecha = new MechaVersion4("额滴个龟龟", 300, 300, 300);
+        MechaVersion4 myMecha = new MechaVersion4("额滴个龟龟", 300, 300);
         TyrantVersion4 tyrant = new TyrantVersion4("MonsterTyrant", 500, 30);
 
         Scanner sc = new Scanner(System.in);
