@@ -1,8 +1,5 @@
 package day09;
 
-import day08.MechaVersion4;
-import day08.TyrantVersion4;
-
 import java.util.Scanner;
 
 public class BattleGameV6_1Demo {
@@ -38,7 +35,7 @@ public class BattleGameV6_1Demo {
         System.out.print("请输入你的选择：");
     }
 
-    public static int getValiChoice(Scanner sc){
+    public static int getValidChoice(Scanner sc){
         while (true){
             if(!sc.hasNextInt()){
                 System.out.println("输入错误，请输入：1、2 或 3！");
@@ -80,7 +77,7 @@ public class BattleGameV6_1Demo {
     public static void playRound(MechaVersion6_1 mecha, TyrantVersion6_1 tyrant, Scanner sc){
         showStatus(mecha, tyrant);
         showMenu();
-        handlePlayerTurn(mecha, tyrant, getValiChoice(sc));
+        handlePlayerTurn(mecha, tyrant, getValidChoice(sc));
         handleEnemyTurn(mecha, tyrant);
     }
 

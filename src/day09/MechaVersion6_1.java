@@ -60,6 +60,7 @@ public class MechaVersion6_1 {
     public void repair(){
         if(energy < 30){
             System.out.println(name + "能量不足，无法进行【纳米修复】！");
+            return;
         }
 
         energy -= 30;
