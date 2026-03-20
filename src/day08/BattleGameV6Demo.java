@@ -63,13 +63,27 @@ public class BattleGameV6Demo {
 
 
     public static void handlePlayerTurn(MechaVersion4 mecha, TyrantVersion4 tyrant, int choice){
-        if(choice == 1){
-            mecha.machineGun(tyrant);
-        } else if (choice == 2) {
-            mecha.orbitalStrike(tyrant);
-        } else {
-            mecha.repair();
+        switch(choice){
+            case 1:
+                mecha.machineGun(tyrant);
+                break;
+            case 2:
+                mecha.orbitalStrike(tyrant);
+                break;
+            case 3:
+                mecha.repair();
+                break;
+            default:
+                System.out.println("输入无效，本回合跳过！");
         }
+
+//        if(choice == 1){
+//            mecha.machineGun(tyrant);
+//        } else if (choice == 2) {
+//            mecha.orbitalStrike(tyrant);
+//        } else {
+//            mecha.repair();
+//        }
     }
 
     public static void handleEnemyTurn(MechaVersion4 mecha, TyrantVersion4 tyrant){
