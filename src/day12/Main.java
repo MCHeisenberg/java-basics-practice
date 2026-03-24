@@ -1,28 +1,37 @@
 package day12;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
+    /*psvm
+    * A
+    * add
+    * add
+    *
+    * u f = fbn
+    * f.s
+    *
+    * c = chs
+    * sout c
+    *
+    * ***************
+    * p s u fbn -
+    * --------
+    * p s i chs
+    * */
+
     public static void main(String[] args) {
         ArrayList<User> users = new ArrayList<>();
-        users.add(new User("Tom",10));
-        users.add(new User("Jack",20));
-        users.add(new User("Lucy",30));
+        users.add(new User("Duke",88));
+        users.add(new User("Drunk",56));
 
-        User foundUser = findByName(users,"ack");
+//        User foundUser = findeByName("Duke");
+//        foundUser.show();
 
-        if(foundUser != null){
-            foundUser.show();
-        }else {
-            System.out.println("no found bchin");
-        }
+//        int count = countHighScore(users);
+//        System.out.println(count);
     }
-    public static User findByName(ArrayList<User> users,String name){
-        for(User bitc : users){
-            if(bitc.name.equals(name)){
-                return bitc;
-            }
-        }
-        return null;
-    }
+    
 }
+

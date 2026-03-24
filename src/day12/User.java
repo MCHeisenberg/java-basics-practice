@@ -1,15 +1,23 @@
 package day12;
 
 public class User {
-    String name;
-    int score;
+    private String name;
+    private int score;
 
-    public User(String name, int score){
+    public User(String name, int score) {
         this.name = name;
         this.score = score;
     }
 
-    public void show(){
-        System.out.println(name+" "+score);
+    public String getName() {
+        return name;
     }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void show(){
+       System.out.println(name+" "+score);
+   }
 }
