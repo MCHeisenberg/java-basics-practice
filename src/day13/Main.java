@@ -8,16 +8,22 @@ public class Main {
         users.add(new User("nama",74));
         users.add(new User("namb",372));
 
+        int count=0;
+        count=countHighScore(users);
+        System.out.println("count"+count);
 
+        User foundUser = findByName(users,"nama");
+        foundUser.show();
 
-
+        User maxUser = findMaxScoreUser(users);
+        maxUser.show();
     }
     public static User findMaxScoreUser(ArrayList<User> users){
         if(users.size()==0){
             return null;
         }
         User maxUser=users.get(0);
-        for(int i=0;i<=users.size();i++){
+        for(int i=1;i<=users.size()-1;i++){
            if(users.get(i).score>maxUser.score){
                maxUser = users.get(i);
            }
