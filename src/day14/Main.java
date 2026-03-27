@@ -11,7 +11,22 @@ public class Main {
         users.add(new User("Lucy", 67));
         users.add(new User("Rose", 40));
 
+        System.out.println("block 07 String:");
+        String s = "Frank";
+        System.out.println(s.length());
+        System.out.println(s.charAt(0));
+        System.out.println(s.charAt(s.length() - 1));
+        for(int i = 0;i<=s.length()-1;i++){
+            System.out.println(s.charAt(i));
+        }
+
+
     }
+
+
+
+
+
     public static void showAll(ArrayList<User> users){
         for(User ghost:users){
             ghost.show();
