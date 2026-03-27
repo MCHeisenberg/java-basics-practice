@@ -55,6 +55,29 @@ public class Main {
         return maxUser;
     }
 
+    public static void addScoreByName(ArrayList<User> users,String name,int value){
+        User foundUser = findByName(users,name);
+        if(foundUser != null){
+            foundUser.score += value;
+        }
+    }
+
+    public static void removeByName(ArrayList<User> users,String anme){
+        if(){
+            return;
+        }
+        User;
+        for(){
+            if(users.get(i).name.equals(name)){
+                users.get(i).remove;
+                return
+            }
+        }
+    }
+
+
+
+
 
 
 
