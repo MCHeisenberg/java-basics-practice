@@ -1,15 +1,29 @@
 package day14;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayList<User> users = new ArrayList<>();
-
-        users.add(new User("Tom", 55));
-        users.add(new User("Jack", 80));
-        users.add(new User("Lucy", 67));
-        users.add(new User("Rose", 40));
+//        ArrayList<User> users1;
+//        ArrayList<User> users = new ArrayList<>();
+//        users.add(null);
+//        User user3 = users.get(0);
+        //users.get(0);
+//        users.add(null);
+        //System.out.println(users.isEmpty());
+        //System.out.println("users size: "+users.size());
+        //users.add(new User("Tom", 55));
+        //users.add(new User("Jack", 80));
+        //users.add(null);
+        //users.add(new User("Lucy", 67));
+        //users.add(new User("Rose", 40));
+        //removeByName(users,"Jack");
+        //findMaxScoreUser(users).show();
+        //findMaxScoreUser(users);
+        //users.add(null);
+        //User user1 = users.get(0);
+        //User user2 = users.get(1);
 
         System.out.println("block 07 String:");
         String s = "Frank";
@@ -19,6 +33,15 @@ public class Main {
         for(int i = 0;i<=s.length()-1;i++){
             System.out.println(s.charAt(i));
         }
+
+        System.out.println("Block 08");
+        System.out.println(s.substring(0,s.length()));
+        System.out.println(s.substring(1));
+
+        System.out.println("Block 09");
+
+
+
 
 
     }
@@ -42,6 +65,16 @@ public class Main {
         return null;
     }
 
+    public static int countHighScore(ArrayList<User> users) {
+        int count = 0;
+        for (User user : users) {
+            if (user.score >= 60) {
+                count++;
+            }
+        }
+        return count;
+    }
+
     public static User findMaxScoreUser(ArrayList<User> users){
         if(users.size()== 0){
             return null;
@@ -62,15 +95,20 @@ public class Main {
         }
     }
 
-    public static void removeByName(ArrayList<User> users,String anme){
-        if(){
-            return;
+    public static void removeByName(ArrayList<User> users,String name){
+        for(int i = 0;i<=users.size()-1;i++){
+            if(users.get(i)!=null && users.get(i).name.equals(name)){
+                users.remove(i);
+                return;
+            }
         }
-        User;
-        for(){
-            if(users.get(i).name.equals(name)){
-                users.get(i).remove;
-                return
+    }
+
+    public static void updateScoreByName(ArrayList<User> users, String name, int newScore){
+        for(User ghost:users){
+            if(ghost!=null && Objects.equals(ghost.name, name)){
+                ghost.score=newScore;
+                return ;
             }
         }
     }
