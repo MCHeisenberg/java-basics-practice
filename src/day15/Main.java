@@ -22,15 +22,66 @@ public class Main {
         System.out.println(targetList[2]);
         targetList[1]="Jorge";
         System.out.println(targetList[1]);
+        System.out.println(targetList.length);
+        System.out.println(targetList[1].length());
 
-        //block13
+        //block13 - array traversal
         int[] nums = {10, 20, 30, 40};
-        for(int i=0;i<nums.length;i++){
+        for (int i=0;i<nums.length;i++) {
             System.out.println(nums[i]);
         }
 
+        //block 12 - array define/init/access
+        int[] nums1 = {1,2,34,54};
+        System.out.println(nums1[0]);
+        System.out.println(nums1[3]);
 
+        //block 14 array sum
+        int sum=0;
+        for (int i=0;i<nums1.length;i++) {
+            sum += nums1[1];
+        }
+        System.out.println("nums1 sum: "+sum);
+
+        //block 15 - array max
+        int max=nums1[0];
+        for(int i=0;i<nums1.length;i++){
+            if(nums1[i]>max){
+                max=nums1[i];
+            }
+        }
+        System.out.println(max);
+
+        //block 16 - arrayHasNumber
+        boolean result = arrayHasNumber(nums1,34);
+        System.out.println(result);
+
+        //block 17
+        int count = countTarget(nums1,34);
+        System.out.println(count);
     }
+
+    //block17
+    public static int countTarget(int[] nums,int target) {
+        int count =0;
+        for (int i=0;i<nums.length;i++) {
+            if (nums[i]==target) {
+                count ++;
+            }
+        }
+        return count;
+    }
+
+    //block16
+    public static boolean arrayHasNumber(int[] nums, int target) {
+        for (int i=0;i<nums.length;i++) {
+            if (nums[i]==target) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 
     public static void analyzeText(String text) {
         String lowerText=text.toLowerCase();
