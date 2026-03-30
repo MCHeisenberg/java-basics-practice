@@ -59,9 +59,23 @@ public class Main {
         //block 17
         int count = countTarget(nums1,34);
         System.out.println(count);
+
+        //block 18
+        replaceTarget(nums1,34,43);
+        for (int i=0;i<nums1.length;i++){
+            System.out.println(nums1[i]);
+        }
+    }
+    //block 18
+    public static void replaceTarget(int[] nums,int oldValue,int newValue) {
+        for(int i=0;i<nums.length;i++){
+            if(nums[i]==oldValue){
+                nums[i]=newValue;
+            }
+        }
     }
 
-    //block17
+    //block 17
     public static int countTarget(int[] nums,int target) {
         int count =0;
         for (int i=0;i<nums.length;i++) {
@@ -72,7 +86,7 @@ public class Main {
         return count;
     }
 
-    //block16
+    //block 16
     public static boolean arrayHasNumber(int[] nums, int target) {
         for (int i=0;i<nums.length;i++) {
             if (nums[i]==target) {
