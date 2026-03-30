@@ -43,10 +43,10 @@ public class MainBlock19Merge {
         return count;
     }
     public static void replaceTarget(int[] nums, int oldValue, int newValue) {
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i] == oldValue) {
-                nums[i] = newValue;
-            }
-        }
+      for(int i=0;i<nums.length;i++){
+          if(nums[i] == oldValue){
+              nums[i]=newValue;
+          }
+      }
     }
 }
